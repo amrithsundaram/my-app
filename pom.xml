@@ -1,10 +1,40 @@
+Skip to content
+ Enterprise
+Search or jump to…
+
+Pull requests
+Issues
+Explore
+ 
+@amrith-sundaram 
+amrith-sundaram
+/
+microapp
+1
+0
+0
+Code
+Issues
+Pull requests
+Projects
+Wiki
+Insights
+Settings
+microapp/pom.xml
+@amrith-sundaram
+amrith-sundaram commited
+Latest commit 1e6e7dd on Aug 4
+ History
+ 1 contributor
+63 lines (57 sloc)  1.75 KB
+  
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>in.javahome</groupId>
 	<artifactId>myweb</artifactId>
 	<packaging>war</packaging>
-	<version>0.0.2</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<name>my-app</name>
 	<url>http://maven.apache.org</url>
 
@@ -30,9 +60,14 @@
 
 	</dependencies>
 	<distributionManagement>
+		 <snapshotRepository>
+		    <id>nexus</id>
+		    <url>http://172.31.43.180:8081/repository/my-app-snapshot/</url>
+		 </snapshotRepository>
+		
 		<repository>
 		    <id>nexus</id>
-		    <url>http://54.197.176.59:8081/repository/myapp-release/</url>
+		    <url>http://172.31.43.180:8081/repository/my-app-release/</url>
 		</repository>
   	</distributionManagement>
 	
@@ -40,11 +75,11 @@
     <plugins>
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-war-plugin</artifactId>
-            <version>2.2</version>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.6.1</version>
             <configuration>
-                <source>1.8</source>
-                <target>1.8</target>
+                <source>1.7</source>
+                <target>1.7</target>
             </configuration>
         </plugin>
 	<plugin>
@@ -56,3 +91,11 @@
 </build>
 	
 </project>
+© 2021 GitHub, Inc.
+Help
+Support
+API
+Training
+Blog
+About
+GitHub Enterprise Server 2.22.15
