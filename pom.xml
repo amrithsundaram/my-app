@@ -27,7 +27,7 @@
 			<scope>test</scope>
 		</dependency>
 	
-
+       
 	</dependencies>
 	<distributionManagement>
 		 <snapshotRepository>
@@ -58,6 +58,10 @@
             <version>2.19</version>
         </plugin>
     </plugins>
+    <properties>
+    <maven.compiler.source>1.6</maven.compiler.source>
+    <maven.compiler.target>1.6</maven.compiler.target>
+   </properties>
 </build>
 	
 </project>
